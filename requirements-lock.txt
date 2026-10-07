@@ -1,0 +1,21 @@
+# Pinned for reproducibility — matches the configuration verified on the reference unit.
+# mtkclient itself is pinned by commit in setup.sh (cd25cf9c1ff6d36e82697ac2c798e69e9cfb78c3).
+# Install:  pip install -r requirements-lock.txt
+#
+# NOTE: PySide6/shiboken6 (GUI) are optional — headless CLI use does not need them.
+# They are large; install only if you want `mtk_gui.py`.
+
+capstone==5.0.9
+colorama==0.4.6
+keystone==30.0.0
+keystone-engine==0.9.2
+mfusepy==3.1.1
+pycryptodome==3.23.0
+pycryptodomex==3.23.0
+pyserial==3.5
+pyusb==1.3.1
+unicorn==2.1.4
+
+# optional (GUI only)
+# PySide6==6.11.2
+# shiboken6==6.11.2

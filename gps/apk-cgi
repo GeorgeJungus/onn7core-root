@@ -1,0 +1,29 @@
+#!/system/bin/sh
+# CGI script that serves the sender APK with a correct Android MIME type.
+#
+# Why: busybox httpd has no MIME entry for .apk, so it sends NO Content-Type.
+# Chrome then sniffed the bytes, saw the PK\x03\x04 ZIP magic (an APK is a zip),
+# and saved the download as "CarGpsSender.apk.zip".
+#
+# Content-Type: application/vnd.android.package-archive makes Android/Chrome
+# treat it as an installable package instead of an archive.
+
+APK=/data/adb/cargps/CarGpsSender.apk
+
+if [ ! -f "$APK" ]; then
+  echo "Status: 404 Not Found"
+  echo "Content-Type: text/plain"
+  echo
+  echo "APK not staged at $APK"
+  exit 0
+fi
+
+SZ=$(wc -c < "$APK")
+
+echo "Status: 200 OK"
+echo "Content-Type: application/vnd.android.package-archive"
+echo "Content-Disposition: attachment; filename=\"CarGpsSender.apk\""
+echo "Content-Length: $SZ"
+echo
+
+cat "$APK"

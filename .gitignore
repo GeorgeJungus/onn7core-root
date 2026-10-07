@@ -1,0 +1,32 @@
+# 9.4 GB of device-specific stock partition images — never commit.
+# They contain the stock super image. Hashes live in SHA256SUMS.
+backup/
+backup2/
+*.img
+*.bin
+# ...but the preloader IS shipped: it is small, device-specific, and
+# required before you can talk to this SoC's BROM at all.
+!preloader/*.bin
+
+# large downloads / toolchain
+*.apk
+*.gz
+*.7z
+mtkclient/
+logs/
+
+# ESP-IDF / PlatformIO build output (huge, machine-specific, leaks host paths)
+.pio/
+obd/**/.pio/
+*.pyc
+__pycache__/
+
+# Third-party binaries: reference the upstream release instead of redistributing.
+# Vector is GPL-3.0 (an LSPosed fork) - link to it, don't bundle it.
+lsposed/*.zip
+lsposed/*.apk
+
+# ESP32 firmware images (rebuild with `pio run`)
+obd/**/firmware*.bin
+obd/**/bootloader.bin
+obd/**/partitions.bin

@@ -1,0 +1,329 @@
+# Verbatim getprop dump from the reference unit (onn 7" Core, model 36020962)
+# Captured: 2026-10-04T07:01:21Z
+# Serial redacted. Compare YOUR unit against this before following README.md,
+# or just run scripts/preflight.sh which checks the important fields automatically.
+
+## identity / build
+ro.product.brand                       onn
+ro.product.manufacturer                onn
+ro.product.model                       36020962
+ro.product.name                        36020962
+ro.product.device                      onn7core
+ro.product.board                       mid7030_mx_64
+ro.board.platform                      mt6768
+ro.hardware                            mt8786
+ro.boot.hardware                       mt8786
+ro.build.fingerprint                   onn/36020962/onn7core:16/BP2A.250605.031.A3/20260121:user/release-keys
+ro.build.id                            BP2A.250605.031.A3
+ro.build.version.release               16
+ro.build.version.sdk                   36
+ro.build.version.security_patch        2026-01-05
+ro.build.type                          user
+ro.build.tags                          release-keys
+ro.build.date                          Wed Jan 21 11:20:27 CST 2026
+ro.build.description                   sys_mssi_mid7030_mx_64-user 16 BP2A.250605.031.A3 mp1V1025 dev-keys
+ro.build.version.incremental           20260121
+ro.vendor.build.security_patch         2026-01-05
+
+## boot / security state
+ro.boot.slot_suffix                    _a
+ro.boot.slot                           a
+ro.build.ab_update                     true
+ro.boot.dynamic_partitions             true
+ro.boot.verifiedbootstate              orange
+ro.boot.flash.locked                   0
+ro.boot.vbmeta.device_state            unlocked
+ro.boot.veritymode                     enforcing
+ro.boot.veritymode.managed             yes
+ro.crypto.state                        encrypted
+ro.secure                              1
+ro.debuggable                          0
+ro.treble.enabled                      true
+ro.boot.hypervisor.version             GenieZone
+ro.boot.vbmeta.avb_version             1.2
+ro.boot.avb_version                    1.3
+ro.product.ab_ota_partitions           init_boot,product,system,system_ext,vendor
+ro.boot.vbmeta.size                    11712
+ro.boot.vbmeta.hash_alg                sha256
+
+## mtk / tee / hypervisor
+ro.vendor.mtk_microtrust_tee_support   1
+ro.vendor.mtk_emmc_support             1
+ro.boot.meta_log_disable               0
+ro.vendor.mtk_svp_on_mtee_support      1
+ro.boot.hypervisor.vm.supported        1
+
+## cpu / arch / memory
+ro.product.cpu.abi                     arm64-v8a
+ro.product.cpu.abilist                 arm64-v8a,armeabi-v7a,armeabi
+ro.product.cpu.pagesize.max            16384
+ro.product.first_api_level             36
+MemTotal                               3926564 kB
+cpuinfo_max_freq                       1800000
+
+## kernel
+uname                                  Linux localhost 6.6.92-android15-8-ga9774b96e931-ab13814251-4k #1 SMP PREEMPT Mon Jul 21 13:37:28 UTC 2025 aarch64 Toybox
+
+## partition map (by-name -> block device)
+  total 0
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 boot_a -> /dev/block/mmcblk0p25
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 boot_b -> /dev/block/mmcblk0p42
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 boot_para -> /dev/block/mmcblk0p32
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 dtbo_a -> /dev/block/mmcblk0p28
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 dtbo_b -> /dev/block/mmcblk0p45
+  lrwxrwxrwx 1 root root 20 2026-10-03 02:46 expdb -> /dev/block/mmcblk0p3
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 flashinfo -> /dev/block/mmcblk0p51
+  lrwxrwxrwx 1 root root 20 2026-10-03 02:46 frp -> /dev/block/mmcblk0p4
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 gz_a -> /dev/block/mmcblk0p23
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 gz_b -> /dev/block/mmcblk0p40
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 init_boot_a -> /dev/block/mmcblk0p27
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 init_boot_b -> /dev/block/mmcblk0p44
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 lk_a -> /dev/block/mmcblk0p24
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 lk_b -> /dev/block/mmcblk0p41
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 logo_a -> /dev/block/mmcblk0p34
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 logo_b -> /dev/block/mmcblk0p35
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 md1img_a -> /dev/block/mmcblk0p19
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 md1img_b -> /dev/block/mmcblk0p36
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 md_udc -> /dev/block/mmcblk0p11
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 metadata -> /dev/block/mmcblk0p12
+  lrwxrwxrwx 1 root root 20 2026-10-03 02:46 misc -> /dev/block/mmcblk0p1
+  lrwxrwxrwx 1 root root 18 2026-10-03 02:46 mmcblk0 -> /dev/block/mmcblk0
+  lrwxrwxrwx 1 root root 23 2026-10-03 02:46 mmcblk0boot0 -> /dev/block/mmcblk0boot0
+  lrwxrwxrwx 1 root root 23 2026-10-03 02:46 mmcblk0boot1 -> /dev/block/mmcblk0boot1
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 mrdump -> /dev/block/mmcblk0p49
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 nvcfg -> /dev/block/mmcblk0p13
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 nvdata -> /dev/block/mmcblk0p14
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 nvram -> /dev/block/mmcblk0p33
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 otp -> /dev/block/mmcblk0p50
+  lrwxrwxrwx 1 root root 20 2026-10-03 02:46 para -> /dev/block/mmcblk0p2
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 persist -> /dev/block/mmcblk0p15
+  lrwxrwxrwx 1 root root 23 2026-10-03 02:46 preloader_a -> /dev/block/mmcblk0boot0
+  lrwxrwxrwx 1 root root 23 2026-10-03 02:46 preloader_b -> /dev/block/mmcblk0boot1
+  lrwxrwxrwx 1 root root 22 2026-10-03 02:46 preloader_raw_a -> /dev/block/mapper/pl_a
+  lrwxrwxrwx 1 root root 22 2026-10-03 02:46 preloader_raw_b -> /dev/block/mapper/pl_b
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 proinfo -> /dev/block/mmcblk0p31
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 protect1 -> /dev/block/mmcblk0p16
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 protect2 -> /dev/block/mmcblk0p17
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 scp_a -> /dev/block/mmcblk0p21
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 scp_b -> /dev/block/mmcblk0p38
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 sec1 -> /dev/block/mmcblk0p30
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 seccfg -> /dev/block/mmcblk0p18
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 spmfw_a -> /dev/block/mmcblk0p20
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 spmfw_b -> /dev/block/mmcblk0p37
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 sspm_a -> /dev/block/mmcblk0p22
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 sspm_b -> /dev/block/mmcblk0p39
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 super -> /dev/block/mmcblk0p47
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 tee_a -> /dev/block/mmcblk0p29
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 tee_b -> /dev/block/mmcblk0p46
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 userdata -> /dev/block/mmcblk0p48
+  lrwxrwxrwx 1 root root 20 2026-10-03 02:46 vbmeta_a -> /dev/block/mmcblk0p5
+  lrwxrwxrwx 1 root root 20 2026-10-03 02:46 vbmeta_b -> /dev/block/mmcblk0p8
+  lrwxrwxrwx 1 root root 20 2026-10-03 02:46 vbmeta_system_a -> /dev/block/mmcblk0p6
+  lrwxrwxrwx 1 root root 20 2026-10-03 02:46 vbmeta_system_b -> /dev/block/mmcblk0p9
+  lrwxrwxrwx 1 root root 20 2026-10-03 02:46 vbmeta_vendor_a -> /dev/block/mmcblk0p7
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 vbmeta_vendor_b -> /dev/block/mmcblk0p10
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 vendor_boot_a -> /dev/block/mmcblk0p26
+  lrwxrwxrwx 1 root root 21 2026-10-03 02:46 vendor_boot_b -> /dev/block/mmcblk0p43
+
+## filesystem types in use (deduplicated)
+  fs=binder /dev/binderfs
+  fs=bpf /sys/fs/bpf
+  fs=cgroup2 /sys/fs/cgroup
+  fs=cgroup /dev/blkio
+  fs=cgroup /dev/cpuctl
+  fs=cgroup /dev/cpuset
+  fs=cgroup /dev/memcg
+  fs=configfs /config
+  fs=devpts /debug_ramdisk/.magisk/pts
+  fs=devpts /dev/pts
+  fs=erofs /
+  fs=erofs /odm_dlkm
+  fs=erofs /product
+  fs=erofs /system_dlkm
+  fs=erofs /system_ext
+  fs=erofs /system_ext/bin/aee
+  fs=erofs /system_ext/bin/aee_aed
+  fs=erofs /system_ext/bin/aee_aed64
+  fs=erofs /system_ext/bin/aee_aed64_v2
+  fs=erofs /system_ext/bin/aee_core_forwarder
+  fs=erofs /system_ext/bin/aee_core_forwarder_v2
+  fs=erofs /system_ext/bin/aeedb
+  fs=erofs /system_ext/bin/aeedb_v2
+  fs=erofs /system_ext/bin/aee_dumpstate
+  fs=erofs /system_ext/bin/aee_dumpstate_v2
+  fs=erofs /system_ext/bin/aee_v2
+  fs=erofs /system_ext/bin/AudioSetParam
+  fs=erofs /system_ext/bin/batterywarning
+  fs=erofs /system_ext/bin/boot_logo_updater
+  fs=erofs /system_ext/bin/connsyslogger
+  fs=erofs /system_ext/bin/em_svr
+  fs=erofs /system_ext/bin/hw/android.hardware.audio.parameter_parser.service
+  fs=erofs /system_ext/bin/hw/android.hidl.allocator@1.0-service
+  fs=erofs /system_ext/bin/hwservicemanager
+  fs=erofs /system_ext/bin/kpoc_charger
+  fs=erofs /system_ext/bin/lbs_dbg_ext
+  fs=erofs /system_ext/bin/loghidlsysservice
+  fs=erofs /system_ext/bin/mediahelper
+  fs=erofs /system_ext/bin/mkntfs
+  fs=erofs /system_ext/bin/mobile_log_d
+  fs=erofs /system_ext/bin/mtk_plpath_utils
+  fs=erofs /system_ext/bin/netdiag
+  fs=erofs /system_ext/bin/ntfs-3g
+  fs=erofs /system_ext/bin/ntfs-3g-compart
+  fs=erofs /system_ext/bin/ntfsfix
+  fs=erofs /system_ext/bin/rtt
+  fs=erofs /system_ext/bin/rtt_v2
+  fs=erofs /system_ext/bin/terservice
+  fs=erofs /system_ext/bin/thermald
+  fs=erofs /system_ext/bin/trace
+  fs=erofs /vendor
+  fs=erofs /vendor_dlkm
+  fs=ext4 /apex/com.android.adbd
+  fs=ext4 /apex/com.android.adbd@360527560
+  fs=ext4 /apex/com.android.adservices
+  fs=ext4 /apex/com.android.adservices@360650020
+  fs=ext4 /apex/com.android.apex.cts.shim
+  fs=ext4 /apex/com.android.apex.cts.shim@1
+  fs=ext4 /apex/com.android.appsearch
+  fs=ext4 /apex/com.android.appsearch@360673380
+  fs=ext4 /apex/com.android.art
+  fs=ext4 /apex/com.android.art@360529000
+  fs=ext4 /apex/com.android.bt
+  fs=ext4 /apex/com.android.bt@360499999
+  fs=ext4 /apex/com.android.cellbroadcast
+  fs=ext4 /apex/com.android.cellbroadcast@360671160
+  fs=ext4 /apex/com.android.compos
+  fs=ext4 /apex/com.android.compos@3
+  fs=ext4 /apex/com.android.configinfrastructure
+  fs=ext4 /apex/com.android.configinfrastructure@360527560
+  fs=ext4 /apex/com.android.conscrypt
+  fs=ext4 /apex/com.android.conscrypt@360527560
+  fs=ext4 /apex/com.android.crashrecovery
+  fs=ext4 /apex/com.android.crashrecovery@360527560
+  fs=ext4 /apex/com.android.devicelock
+  fs=ext4 /apex/com.android.devicelock@1
+  fs=ext4 /apex/com.android.extservices
+  fs=ext4 /apex/com.android.extservices@360671263
+  fs=ext4 /apex/com.android.hardware.cas
+  fs=ext4 /apex/com.android.hardware.cas@1
+  fs=ext4 /apex/com.android.healthfitness
+  fs=ext4 /apex/com.android.healthfitness@360667100
+  fs=ext4 /apex/com.android.i18n
+  fs=ext4 /apex/com.android.i18n@1
+  fs=ext4 /apex/com.android.ipsec
+  fs=ext4 /apex/com.android.ipsec@360527560
+  fs=ext4 /apex/com.android.media
+  fs=ext4 /apex/com.android.media@360673340
+  fs=ext4 /apex/com.android.mediaprovider
+  fs=ext4 /apex/com.android.mediaprovider@360673340
+  fs=ext4 /apex/com.android.media.swcodec
+  fs=ext4 /apex/com.android.media.swcodec@360673340
+  fs=ext4 /apex/com.android.neuralnetworks
+  fs=ext4 /apex/com.android.neuralnetworks@360527560
+  fs=ext4 /apex/com.android.nfcservices
+  fs=ext4 /apex/com.android.nfcservices@360499999
+  fs=ext4 /apex/com.android.ondevicepersonalization
+  fs=ext4 /apex/com.android.ondevicepersonalization@360659040
+  fs=ext4 /apex/com.android.os.statsd
+  fs=ext4 /apex/com.android.os.statsd@360527520
+  fs=ext4 /apex/com.android.permission
+  fs=ext4 /apex/com.android.permission@360673420
+  fs=ext4 /apex/com.android.profiling
+  fs=ext4 /apex/com.android.profiling@360527560
+  fs=ext4 /apex/com.android.resolv
+  fs=ext4 /apex/com.android.resolv@360671160
+  fs=ext4 /apex/com.android.rkpd
+  fs=ext4 /apex/com.android.rkpd@360671160
+  fs=ext4 /apex/com.android.runtime
+  fs=ext4 /apex/com.android.runtime@1
+  fs=ext4 /apex/com.android.scheduling
+  fs=ext4 /apex/com.android.scheduling@360527560
+  fs=ext4 /apex/com.android.sdkext
+  fs=ext4 /apex/com.android.sdkext@360655020
+  fs=ext4 /apex/com.android.tethering
+  fs=ext4 /apex/com.android.tethering@360671220
+  fs=ext4 /apex/com.android.tzdata
+  fs=ext4 /apex/com.android.tzdata@360527580
+  fs=ext4 /apex/com.android.uprobestats
+  fs=ext4 /apex/com.android.uprobestats@360527560
+  fs=ext4 /apex/com.android.uwb
+  fs=ext4 /apex/com.android.uwb@360527560
+  fs=ext4 /apex/com.android.virt
+  fs=ext4 /apex/com.android.virt@3
+  fs=ext4 /apex/com.android.vndk.v31
+  fs=ext4 /apex/com.android.vndk.v31@1
+  fs=ext4 /apex/com.android.vndk.v33
+  fs=ext4 /apex/com.android.vndk.v33@1
+  fs=ext4 /apex/com.android.vndk.v34
+  fs=ext4 /apex/com.android.vndk.v34@1
+  fs=ext4 /apex/com.android.wifi
+  fs=ext4 /apex/com.android.wifi@360671160
+  fs=ext4 /apex/com.google.android.widevine
+  fs=ext4 /apex/com.google.android.widevine@190250627
+  fs=ext4 /bootstrap-apex/com.android.i18n
+  fs=ext4 /bootstrap-apex/com.android.i18n@1
+  fs=ext4 /bootstrap-apex/com.android.runtime
+  fs=ext4 /bootstrap-apex/com.android.runtime@1
+  fs=ext4 /bootstrap-apex/com.android.tzdata
+  fs=ext4 /bootstrap-apex/com.android.tzdata@360527580
+  fs=ext4 /bootstrap-apex/com.android.virt
+  fs=ext4 /bootstrap-apex/com.android.virt@3
+  fs=ext4 /mnt/vendor/nvcfg
+  fs=ext4 /mnt/vendor/nvdata
+  fs=ext4 /mnt/vendor/persist
+  fs=ext4 /mnt/vendor/protect_f
+  fs=ext4 /mnt/vendor/protect_s
+  fs=f2fs /data
+  fs=f2fs /data_mirror/cur_profiles
+  fs=f2fs /data_mirror/data_ce/null
+  fs=f2fs /data_mirror/data_ce/null/0
+  fs=f2fs /data_mirror/data_de/null
+  fs=f2fs /data_mirror/misc_ce/null
+  fs=f2fs /data_mirror/misc_de/null
+  fs=f2fs /data_mirror/ref_profiles
+  fs=f2fs /data_mirror/storage_area
+  fs=f2fs /data/user/0
+  fs=f2fs /metadata
+  fs=f2fs /mnt/pass_through/0/emulated
+  fs=functionfs /dev/usb-ffs/adb
+  fs=functionfs /dev/usb-ffs/mtp
+  fs=functionfs /dev/usb-ffs/ptp
+  fs=fusectl /sys/fs/fuse/connections
+  fs=fuse /mnt/androidwritable/0/emulated
+  fs=fuse /mnt/installer/0/emulated
+  fs=fuse /mnt/user/0/emulated
+  fs=fuse /storage/emulated
+  fs=proc /proc
+  fs=pstore /sys/fs/pstore
+  fs=selinuxfs /sys/fs/selinux
+  fs=sysfs /sys
+  fs=tmpfs /apex
+  fs=tmpfs /bootstrap-apex
+  fs=tmpfs /data_mirror
+  fs=tmpfs /debug_ramdisk
+  fs=tmpfs /dev
+  fs=tmpfs /linkerconfig
+  fs=tmpfs /mnt
+  fs=tmpfs /mnt/androidwritable
+  fs=tmpfs /mnt/installer
+  fs=tmpfs /mnt/vm
+  fs=tmpfs /storage
+  fs=tmpfs /system_ext/bin
+  fs=tmpfs /system_ext/bin/magisk
+  fs=tmpfs /system_ext/bin/magiskpolicy
+  fs=tmpfs /tmp
+  fs=tracefs /sys/kernel/tracing
+
+## filesystem summary
+  /dev/block/dm-8   1.0G 1.0G     0 100% /
+  tmpfs             1.8G 3.1M  1.8G   1% /dev
+  tmpfs             1.8G    0  1.8G   0% /mnt
+  /dev/block/dm-9   506M 506M     0 100% /system_ext
+  /dev/block/dm-10  262M 262M     0 100% /vendor
+  /dev/block/dm-11  1.3G 1.3G     0 100% /product
+  /dev/block/dm-12   11M  11M     0 100% /vendor_dlkm
+  /dev/block/dm-13   40K  40K     0 100% /odm_dlkm
+  magisk            1.8G 2.8M  1.8G   1% /debug_ramdisk
+  tmpfs             1.8G  16K  1.8G   1% /apex
+  tmpfs             1.8G 4.0K  1.8G   1% /bootstrap-apex
+  /dev/block/loop2   11M  11M     0 100% /bootstrap-apex/com.android.runtime@1

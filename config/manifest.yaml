@@ -1,0 +1,81 @@
+# Reproducibility manifest - onn 7" Core (2026), model 36020962 / onn7core
+# Everything the procedure depends on, pinned. If your tablet matches
+# config/device-fingerprint.txt you can follow README.md verbatim.
+
+device:
+  model: "36020962"
+  codename: onn7core
+  board: mid7030_mx_64
+  ro_hardware: mt8786
+  ro_board_platform: mt6768
+  soc: "MediaTek MT8786V/N (Helio P65/G85 k68v1)"
+  brom_hwcode: "0x707"
+  android: "16"
+  sdk: "36"
+  build_id: BP2A.250605.031.A3
+  build_incremental: "20260121"
+  security_patch: "2026-01-05"
+  slot_layout: A/B
+  active_slot: a
+  dynamic_partitions: true
+  super_slotted: false
+  system_fs: erofs
+  userdata_fs: "f2fs (FBE)"
+  recovery_partition: none
+  recovery_note: "recovery ramdisk lives inside vendor_boot"
+  ram_gb: 4
+  storage_gb: 64
+
+brom_security:
+  sbc_enabled: false
+  sla_enabled: false
+  daa_enabled: false
+  mem_read_auth: true
+  mem_write_auth: true
+  cmd_0xc8_blocked: true
+
+host_toolchain:
+  adb: "1.0.41 (platform-tools 34.0.4)"
+  fastboot: "34.0.4-debian"
+  python: "3.12.3"
+  mtkclient:
+    repo: "https://github.com/bkerler/mtkclient"
+    commit: cd25cf9c1ff6d36e82697ac2c798e69e9cfb78c3
+    describe: v2.1.4.1-48-gcd25cf9
+    date: "2026-09-12"
+  python_deps: requirements-lock.txt
+
+artifacts:
+  magisk:
+    version: "v30.7"
+    version_code: 30700
+    channel: stable
+    apk_url: "https://github.com/topjohnwu/Magisk/releases/download/v30.7/Magisk-v30.7.apk"
+    apk_sha256: e0d32d2123532860f97123d927b1bb86c4e08e6fd8a48bfc6b5bee0afae9ebd5
+  preloader:
+    path: preloader/preloader_mid7030_mx_64.bin
+    sha256: 25468f7c6c7ca05d0dac430762e42ed9d4138e31c8a0236d560c42e48ea2e641
+    size: 330216
+
+per_unit_artifacts:
+  note: "device-specific, produced during the run, NOT committed"
+  stock_init_boot_a_sha256: 689a504a41a0d89758aba5a727d9e6b9bf22ecbfe4e07bbd544ede3a73fa7463
+  patched_init_boot_a_sha256: c77270766f2a6a272956444b8e42d9df1930537d34db60df7aa81265e06e79b3
+  patched_init_boot_a_filename: magisk_patched-30700_MhNzJ.img
+  patched_size: 8388608
+  patched_diff_bytes_vs_stock: 3039473
+
+backup_set:
+  partitions: 17
+  total_bytes_approx: 10100000000
+  boot_chain_bytes_approx: 370000000
+  super_stock_bytes: 9663676416
+  super_stock_sha256: b59e5f3f2843e4e24e622e2b99c082cd6a2762592f0225049ad3da3a5e8404d2
+  hashes: SHA256SUMS
+
+verified_result:
+  root_context: "u:r:magisk:s0"
+  magisk_version: "30.7:MAGISK:R (30700)"
+  magiskd_pids: 2
+  survives_reboot: true
+  selinux: Enforcing
